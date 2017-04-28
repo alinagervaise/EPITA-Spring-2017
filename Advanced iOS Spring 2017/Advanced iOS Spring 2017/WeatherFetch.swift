@@ -11,7 +11,7 @@ import Foundation
 class WeatherFetch {
     
     private let openWeatherMapBaseURL = "http://api.openweathermap.org/data/2.5/boogity"
-    private let openWeatherMapAPIKey = "Y0URK3YG03SH3R3"
+    private let openWeatherMapAPIKey = "a1848fa820bc683a77bf52f0b254f950"
     
     func getWeather(city: String) {
         
