@@ -18,9 +18,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let myWeather = Weather(city:"Nice", temperature: 30, picture:nil)
+        cityLabel.text = myWeather!.city
+        temperatureLabel.text  = String(describing: myWeather!.temperature)
         
-        let weather = WeatherFetch()
-        weather.getWeather(city: "paris")
+        print("Print city: \(myWeather!.city)")
+        //let weather = WeatherFetch()
+        //weather.getWeather(city: "paris")
     }
 
     override func didReceiveMemoryWarning() {
