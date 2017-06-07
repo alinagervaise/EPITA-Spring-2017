@@ -20,10 +20,10 @@ class MyTableViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        weatherArray.append(Weather(city: "Lyon", temperature: 10, picture: nil)!)
-        weatherArray.append(Weather(city: "Nancy", temperature: 20, picture: nil)!)
+        weatherArray.append(Weather(city: "Lyon", temperature: 10, picture: UIImage(named: "image3"))!)
+        weatherArray.append(Weather(city: "Lille", temperature: 20, picture: UIImage(named: "image1"))!)
         weatherArray.append(Weather(city: "Cannes", temperature: 10, picture: nil)!)
-        weatherArray.append(Weather(city: "Antibes", temperature: 20, picture: nil)!)
+        weatherArray.append(Weather(city: "New York", temperature: 20, picture: UIImage(named: "image2"))!)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -55,6 +55,8 @@ class MyTableViewController: UITableViewController {
         // Configure the cell...
         cell.CityNameLabel?.text = weatherArray[indexPath.row].city
         cell.TemperatureLabel?.text = String(weatherArray[indexPath.row].temperature)
+        
+        cell.WeatherImageView.image = weatherArray[indexPath.row].picture
         
         return cell
     }

@@ -68,7 +68,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wd7-13-WVa">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wd7-13-WVa">
                                             <rect key="frame" x="231" y="22" width="136" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -92,6 +92,7 @@
                                     <outlet property="CityNameLabel" destination="h7j-h3-tez" id="ml8-Y3-udu"/>
                                     <outlet property="TemperatureLabel" destination="TCZ-26-kO8" id="Uc9-Ei-0Vi"/>
                                     <outlet property="WeatherImageView" destination="wd7-13-WVa" id="W7O-zr-mQl"/>
+                                    <segue destination="Vx3-sJ-hqH" kind="show" id="TOW-ss-ZsO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -153,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2T-G6-Rj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2750" y="858"/>
+            <point key="canvasLocation" x="2823" y="558"/>
         </scene>
         <!--Add City-->
         <scene sceneID="vAI-uG-76L">

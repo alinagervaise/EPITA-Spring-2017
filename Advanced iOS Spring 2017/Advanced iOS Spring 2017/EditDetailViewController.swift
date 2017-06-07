@@ -45,8 +45,10 @@ class EditDetailViewController: UIViewController {
         }
         let city = CityNameText.text
         let temperature = Int(TemperatureText.text!)
+        let array = ["image1","image2","image3" ,"image4"]
+        let randomIndex =  Int(arc4random_uniform(UInt32(array.count)))
         
-        weather = Weather(city:city!, temperature:temperature!, picture: nil)
+        weather = Weather(city:city!, temperature:temperature!, picture:  UIImage(named: array[randomIndex]))
     }
     /*
     // MARK: - Navigation
