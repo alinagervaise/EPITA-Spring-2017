@@ -9,11 +9,20 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    var weather : Weather?
+    @IBOutlet weak var temperatureLabel: UILabel!
 
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var cityImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        cityLabel.text = weather?.city
+        temperatureLabel.text = String(describing: weather!.temperature)
+        cityImage.image = weather?.picture
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +31,15 @@ class DetailViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+        super.prepare(for: segue, sender: sender)
+           }
+    
 
 }
