@@ -20,10 +20,14 @@ class MyTableViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        weatherArray.append(Weather(city: "Lyon", temperature: 10, picture: UIImage(named: "image3"))!)
         weatherArray.append(Weather(city: "Lille", temperature: 20, picture: UIImage(named: "image1"))!)
-        weatherArray.append(Weather(city: "Cannes", temperature: 10, picture: nil)!)
         weatherArray.append(Weather(city: "New York", temperature: 20, picture: UIImage(named: "image2"))!)
+        weatherArray.append(Weather(city: "Lyon", temperature: 10, picture: UIImage(named: "image3"))!)
+        weatherArray.append(Weather(city: "Paris", temperature: 32, picture: UIImage(named: "image5"))!)
+        weatherArray.append(Weather(city: "Champagne", temperature: 10, picture: UIImage(named: "image6"))!)
+        weatherArray.append(Weather(city: "Cannes", temperature: 10, picture: UIImage(named: "image7"))!)
+        weatherArray.append(Weather(city: "Dijon", temperature: 10, picture: UIImage(named: "image8"))!)
+       
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -60,15 +64,7 @@ class MyTableViewController: UITableViewController {
         
         return cell
     }
-    /*
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if  segue.identifier == DetailViewControllerIdentifier,
-            let destination = segue.destination as? DetailViewController,
-            selectedRow = tableView.indexPathForSelectedRow?.row
-        {
-            destination.weather = weatherArray[selectedRow]
-        }
-    } */
+  
  /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
